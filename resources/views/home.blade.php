@@ -1,4 +1,4 @@
-@extends('layouts.admin') {{-- Herda o nosso layout AdminLTE --}}
+@extends('layouts.admin')
 
 @section('title', 'Painel de Controle')
 
