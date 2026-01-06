@@ -25,7 +25,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('demandas.index') }}"
+                        class="nav-link {{ request()->routeIs('demandas.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-list-check mr-1"></i>
                         <p>Minhas Demandas</p>
                     </a>
