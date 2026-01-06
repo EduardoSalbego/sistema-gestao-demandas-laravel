@@ -1,22 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.admin') {{-- Herda o nosso layout AdminLTE --}}
+
+@section('title', 'Painel de Controle')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>0</h3>
+                <p>Novas Demandas</p>
             </div>
+            <div class="icon">
+                <i class="fas fa-clipboard-list"></i>
+            </div>
+            <a href="#" class="small-box-footer">Ver todas <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
 </div>
