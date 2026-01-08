@@ -10,11 +10,15 @@ class DemandaController extends Controller
 {
     // no index usei paginate pensando em escalabilidade. se o sistema tiver muitas demandas, o método all(), por ex, provavelmente
     // iria travar, enquanto o paginate não.
-    public function index()
+    public function index(Request $request)
     {
-        $demandas = Demanda::where('user_id', Auth::id())
-                            ->latest()
-                            ->paginate(10);
+        $query = Demanda::where('user_id', Auth::id());
+
+        if ($request->has('status') && $request->status !== null) {
+            $query->where('status', $request->status);
+        }
+
+        $demandas = $query->latest()->paginate(10);
 
         return view('demandas.index', compact('demandas'));
     }

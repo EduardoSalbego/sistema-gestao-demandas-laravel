@@ -3,6 +3,34 @@
 @section('title', 'Minhas Demandas')
 
 @section('content')
+<div class="card">
+    <div class="card-body p-3"> <form action="{{ route('demandas.index') }}" method="GET">
+            <label class="mr-3">Exibir:</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="status" id="statusTodas" value="" 
+                       {{ request('status') === null ? 'checked' : '' }}
+                       onchange="this.form.submit()">
+                <label class="form-check-label" for="statusTodas" style="cursor: pointer;">Todas</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="status" id="statusPendentes" value="1" 
+                       {{ request('status') == '1' ? 'checked' : '' }}
+                       onchange="this.form.submit()">
+                <label class="form-check-label" for="statusPendentes" style="cursor: pointer;">
+                    <span class="badge badge-warning">Pendentes</span>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="status" id="statusConcluidas" value="0" 
+                       {{ request('status') == '0' ? 'checked' : '' }}
+                       onchange="this.form.submit()">
+                <label class="form-check-label" for="statusConcluidas" style="cursor: pointer;">
+                    <span class="badge badge-success">Concluídas</span>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Lista de Tarefas</h3>
