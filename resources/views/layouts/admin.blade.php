@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gestão de Demandas</title>
+    <title>Gestão de Demandas | @yield('title')</title>
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -41,7 +41,7 @@
         </div>
 
         <footer class="main-footer">
-            <strong>Copyright &copy; 2024 Gestão Demandas.</strong>
+            <strong>Copyright &copy; 2026 Eduardo Salbego.</strong>
             Todos os direitos reservados.
         </footer>
     </div>
