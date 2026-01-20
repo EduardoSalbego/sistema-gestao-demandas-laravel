@@ -62,10 +62,10 @@ Siga os passos abaixo para rodar o projeto na sua máquina.
 
 ```bash
 # Clone the repository
-git clone https://github.com/EduardoSalbego/sistema-gestao-demandas-laravel.git
+git clone https://github.com/EduardoSalbego/demand-management-system.git
 
 # Enter the project directory
-cd demand-management
+cd demand-management-system
 
 # Install PHP dependencies
 composer install
